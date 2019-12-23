@@ -1,5 +1,11 @@
 extends ../layout
+include ../mixin/item-list
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+    h1 DON'T FORGET
+  div(class='items-list')
+    ul
+      +item-list({name: 'TESTE 1', id: 'item-1'})
+      +item-list({name: 'TESTE 2', id: 'item-2'})
+      +item-list({name: 'TESTE 3', id: 'item-3'})
